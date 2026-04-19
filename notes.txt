@@ -12,8 +12,9 @@ Packages:
 	git
 	hyprutils
 	xdg-desktop-portal-hyprland
+	waybar
 
-sudo pacman -Sy firefox man hwinfo hyprpaper hypridle hyprlock hyprlauncher xdg-desktop-portal-hyprland git 
+sudo pacman -Sy waybar firefox man hwinfo hyprpaper hypridle hyprlock hyprlauncher xdg-desktop-portal-hyprland git 
 
 
 # .bashc
