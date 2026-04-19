@@ -13,7 +13,7 @@ Packages:
 	hyprutils
 	xdg-desktop-portal-hyprland
 
-sudo pacman -Sy firefox man hwinfo hyprpaper hypridle hyprlock hyrlauncher xdg-desktop-portal-hyprland git 
+sudo pacman -Sy firefox man hwinfo hyprpaper hypridle hyprlock hyprlauncher xdg-desktop-portal-hyprland git 
 
 
 # .bashc
