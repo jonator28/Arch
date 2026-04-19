@@ -1,0 +1,20 @@
+
+Packages:
+	firefox
+	man
+	hwinfor
+	hyprpaper
+	hyprlauncher
+	hypridle
+	hyprlock
+	hyprtoolkit
+	hyprwire
+	git
+	hyprutils
+	xdg-desktop-portal-hyprland
+
+sudo pacman -Sy firefox man hwinfo hyprpaper hypridle hypr
+
+
+# .bashc
+alias ll=’ls -la’
