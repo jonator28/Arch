@@ -29,3 +29,28 @@ sudo gpasswd -a $USER libvirt
 sudo gpasswd -a $USER kvm
 
 sudo systemctl restart libvirtd
+
+Download Whonix: www.whonix.org/wiki/KVM#Arch_Linux_2
+
+cd ~/Downloads
+tar -xSvf Whonix*.libvirt.xz
+
+touch WHONIX_BINARY_LICENSE_AGREEMENT_accepted
+
+sudo virsh -c qemu:///system net-define Whonix_external*.xml
+sudo virsh -c qemu:///system net-define Whonix_internal*.xml
+
+sudo virsh -c qemu:///system net-define Whonix_internal*.xml
+sudo virsh -c qemu:///system net-autostart Whonix-Internal
+reboot
+# check if corrctly loaded
+sudo virsh -c qemu:///system net-start Whonix-External
+sudo virsh -c qemu:///system net-start Whonix-Internal
+
+sudo virsh -c qemu:///system define Whonix-Gateway*.xml
+sudo virsh -c qemu:///system define Whonix-Workstation*.xml
+
+sudo cp --sparse=always Whonix-Gateway*.qcow2 /var/lib/libvirt/images/Whonix-Gateway.qcow2
+sudo cp --sparse=always Whonix-Workstation*.qcow2 /var/lib/libvirt/images/Whonix-Workstation.qcow2
+
+Start the Virtual Machine Manager
