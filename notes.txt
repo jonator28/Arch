@@ -19,3 +19,13 @@ sudo pacman -Sy waybar firefox man hwinfo hyprpaper hypridle hyprlock hyprlaunch
 
 # .bashc
 alias ll=’ls -la’
+
+
+KMV
+sudo pacman -Syu qemu libvirt virt-manager qemu-full dnsmasq iproute2 xz
+sudo systemctl enable libvirtd
+
+sudo gpasswd -a $USER libvirt
+sudo gpasswd -a $USER kvm
+
+sudo systemctl restart libvirtd
