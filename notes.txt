@@ -20,6 +20,12 @@ sudo pacman -Sy waybar firefox man hwinfo hyprpaper hypridle hyprlock hyprlaunch
 # .bashc
 alias ll=’ls -la’
 
+WIFI
+pacman -S networkmanager
+systemctl enable --now NetworkManager
+nmcli device wifi list
+nmcli device wifi connect YOUR_SSID password YOUR_PASSWORD
+
 
 KMV
 sudo pacman -Syu qemu libvirt virt-manager qemu-full dnsmasq iproute2 xz
