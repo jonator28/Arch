@@ -13,8 +13,9 @@ Packages:
 	hyprutils
 	xdg-desktop-portal-hyprland
 	waybar
+	brightnessctl
 
-sudo pacman -Sy waybar firefox man hwinfo hyprpaper hypridle hyprlock hyprlauncher xdg-desktop-portal-hyprland git 
+sudo pacman -Sy waybar firefox man hwinfo hyprpaper hypridle hyprlock hyprlauncher xdg-desktop-portal-hyprland git brightnessctl
 
 
 # .bashc
